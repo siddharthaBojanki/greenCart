@@ -64,6 +64,8 @@ const Cart = () => {
                     address: selectedAddress._id
                 });
                 if (data.success){
+                    toast.success(data.message);
+                    setCartItems({});
                     window.location.replace(data.url);
                 }
                 else
