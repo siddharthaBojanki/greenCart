@@ -21,6 +21,7 @@ await connectDB();
 // Allow multiple origins
 const allowedOrigins = ['http://localhost:5173', 'https://green-cart-taupe.vercel.app'];
 
+//For stripe
 app.post('/stripe', express.raw({type: "application/json"}), stripeWebhooks);
 
 //MIDDLEWARE configuration
